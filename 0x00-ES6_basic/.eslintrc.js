@@ -2,11 +2,13 @@ module.exports = {
   env: {
 	  browser: false,
 	  es6: true,
-	  jest: true
+	  jest: true,
+	  'jest/globals': true
   },
   extends: [
 	  'airbnb-base',
-	  'plugin:jest/all'
+	  'plugin:jest/all',
+	  'plugin:jest/recommended'
   ],
   globals: {
 	  Atomics: 'readonly',
@@ -23,6 +25,11 @@ module.exports = {
   rules: {
 	  'no-console': 'off',
 	  'no-shadow': 'off',
+	  'no-unused-vars': 'warn',
+      'jest/no-disabled-tests': 'warn',
+      'jest/no-focused-tests': 'error',
+      'jest/no-identical-title': 'error',
+      'jest/valid-expect': 'error',
 	  'no-restricted-syntax': [
       'error',
       'LabeledStatement',
