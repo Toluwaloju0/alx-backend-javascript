@@ -12,11 +12,14 @@ module.exports = {
 	  Atomics: 'readonly',
 	  SharedArrayBuffer: 'readonly'
   },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
 	  ecmaVersion: 2018,
-	  sourceType: 'module'
+	  sourceType: 'module',
+	  project: './tsconfig.json',
   },
-  plugins: ['jest'],
+  plugins: ['@typescript-eslint', 'jest'],
+  //plugins: ['jest'],
   rules: {
 	  'no-console': 'off',
 	  'no-shadow': 'off',

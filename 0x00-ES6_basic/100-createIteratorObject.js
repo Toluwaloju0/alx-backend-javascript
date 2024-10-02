@@ -1,8 +1,8 @@
 export default function createIteratorObject(report) {
   const newlist = [];
-  
-  for (let a in report.allEmployees) {
+  // eslint-disable-next-line guard-for-in
+  for (const a in report.allEmployees) {
     newlist.push(...report.allEmployees[a]);
-  };
+  }
   return newlist;
 }
