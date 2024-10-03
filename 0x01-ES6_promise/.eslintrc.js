@@ -18,7 +18,7 @@ module.exports = {
   parserOptions: {
 	  ecmaVersion: 2020,
 	  sourceType: 'module',
-	  //project: './tsconfig.json',
+	  project: ['./tsconfig.json', './.eslintrc.js'],
   },
   plugins: ['@typescript-eslint', 'jest'],
   //plugins: ['jest'],
@@ -39,7 +39,7 @@ module.exports = {
   overrides: [
 	  {
       files: ['*.js'],
-      excludedFiles: 'babel.config.js'
+      excludedFiles: ['babel.config.js', '.eslintrc.js' ],
 	  }
   ]
 };
