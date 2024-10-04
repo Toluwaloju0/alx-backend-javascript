@@ -1,5 +1,5 @@
 module.exports = {
-  parser: "espree",
+  parser: 'espree',
   env: {
     browser: false,
     es6: true,
@@ -19,7 +19,7 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
-    "jest/unbound-method": "off",
+    'jest/unbound-method': 'off',
     'no-console': 'off',
     'no-shadow': 'off',
     'no-restricted-syntax': [
@@ -28,10 +28,10 @@ module.exports = {
       'WithStatement',
     ],
   },
-  overrides:[
+  overrides: [
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
-    }
-  ]
+    },
+  ],
 };
