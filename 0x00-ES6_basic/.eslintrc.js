@@ -1,45 +1,37 @@
 module.exports = {
+  parser: "espree",
   env: {
-	  browser: false,
-	  es6: true,
-	  jest: true,
-	  'jest/globals': true
+    browser: false,
+    es6: true,
+    jest: true,
   },
   extends: [
-	  'airbnb-base',
-	  'plugin:jest/all',
-	  'plugin:jest/recommended'
+    'airbnb-base',
+    'plugin:jest/all',
   ],
   globals: {
-	  Atomics: 'readonly',
-	  SharedArrayBuffer: 'readonly'
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
   },
-  parser: '@typescript-eslint/parser',
   parserOptions: {
-	  ecmaVersion: 2020,
-	  sourceType: 'module',
-	  project: ['./tsconfig.json', './.eslintrc.js'],
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'jest'],
-  //plugins: ['jest'],
+  plugins: ['jest'],
   rules: {
-	  'no-console': 'off',
-	  'no-shadow': 'off',
-	  'no-unused-vars': 'warn',
-      'jest/no-disabled-tests': 'warn',
-      'jest/no-focused-tests': 'error',
-      'jest/no-identical-title': 'error',
-      'jest/valid-expect': 'error',
-	  'no-restricted-syntax': [
+    "jest/unbound-method": "off",
+    'no-console': 'off',
+    'no-shadow': 'off',
+    'no-restricted-syntax': [
       'error',
       'LabeledStatement',
-      'WithStatement'
-	  ]
+      'WithStatement',
+    ],
   },
-  overrides: [
-	  {
+  overrides:[
+    {
       files: ['*.js'],
-      excludedFiles: ['babel.config.js', '.eslintrc.js' ],
-	  }
+      excludedFiles: 'babel.config.js',
+    }
   ]
 };
