@@ -3,10 +3,11 @@ export default function guardrail(mathFunction) {
   try {
     const count = mathFunction();
     list.push(count);
+    return list;
   } catch (error) {
-    list.push(error);
+    list.push(`Error: ${error.message}`);
+    return list;
   } finally {
     list.push('Guardrail was processed');
-    return list;
   }
 }
