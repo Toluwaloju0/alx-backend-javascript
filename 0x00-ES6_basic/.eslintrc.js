@@ -1,5 +1,4 @@
 module.exports = {
-  parser: 'espree',
   env: {
     browser: false,
     es6: true,
@@ -14,12 +13,11 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2018,
     sourceType: 'module',
   },
   plugins: ['jest'],
   rules: {
-    'jest/unbound-method': 'off',
     'no-console': 'off',
     'no-shadow': 'off',
     'no-restricted-syntax': [
@@ -28,10 +26,10 @@ module.exports = {
       'WithStatement',
     ],
   },
-  overrides: [
+  overrides:[
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
-    },
-  ],
+    }
+  ]
 };
