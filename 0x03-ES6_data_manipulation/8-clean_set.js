@@ -7,7 +7,7 @@ export default function cleanset(set, startstring) {
   set.forEach((val) => {
     const sub = val.slice(0, startstring.length);
     if (sub === startstring) {
-      string = `${string + val.slice(3)}-`;
+      string = `${string + val.slice(startstring.length)}-`;
     }
   });
 
