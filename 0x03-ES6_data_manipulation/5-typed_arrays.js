@@ -7,5 +7,6 @@ export default function createInt8TypedArray(length, position, value) {
     return data;
   } catch (RangeError) {
     console.log('Position outside range');
+    return null;
   }
 }
