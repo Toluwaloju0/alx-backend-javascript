@@ -5,8 +5,7 @@ function countStudents(path) {
     const data = fs.readFileSync(path, 'utf-8');
     const dataList = data.split('\n');
     let total = 0;
-    const CS = [];
-    const SWE = [];
+    const CS = [], SWE = [];
     for (let index = 1; index < dataList.length - 1; index += 1) {
       const student = dataList[index].split(',');
       if (student[3] === 'CS') {
@@ -17,13 +16,12 @@ function countStudents(path) {
         SWE.push(student[0]);
       }
     }
-    process.stdout.write(`Number of students: ${total}\n`);
-    process.stdout.write(`Number of students in CS: ${CS.length}. \
-List: ${CS.toString().replaceAll(',', ', ')}\n`);
-    process.stdout.write(`Number of students in SWE: ${SWE.length}. \
-List: ${SWE.toString().replaceAll(',', ', ')}\n`);
+    console.log(`Number of students: ${total}`);
+    console.log(`Number of students in CS: ${CS.length}. \
+List: ${CS.toString().replaceAll(',', ', ')}`);
+    console.log(`Number of students in SWE: ${SWE.length}. \
+List: ${SWE.toString().replaceAll(',', ', ')}`);
   } catch (err) {
-    console.log(err);
     throw new Error('Cannot load the database');
   }
 }
