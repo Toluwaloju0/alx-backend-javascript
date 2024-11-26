@@ -17,11 +17,11 @@ async function countStudents(path) {
         SWE.push(student[0]);
       }
     }
-    process.stdout.write(`Number of students: ${total}\n`);
-    process.stdout.write(`Number of students in CS: ${CS.length}. \
-List: ${CS.toString().replaceAll(',', ', ')}\n`);
-    process.stdout.write(`Number of students in SWE: ${SWE.length}. \
-List: ${SWE.toString().replaceAll(',', ', ')}\n`);
+    console.log(`Number of students: ${total}`);
+    console.log(`Number of students in CS: ${CS.length}. \
+List: ${CS.toString().replaceAll(',', ', ')}`);
+    console.log(`Number of students in SWE: ${SWE.length}. \
+List: ${SWE.toString().replaceAll(',', ', ')}`);
     return Promise.resolve(data);
   } catch (err) {
     throw new Error('Cannot load the database');

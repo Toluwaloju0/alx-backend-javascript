@@ -5,7 +5,8 @@ function countStudents(path) {
     const data = fs.readFileSync(path, 'utf-8');
     const dataList = data.split('\n');
     let total = 0;
-    const CS = [], SWE = [];
+    const CS = [];
+    const SWE = [];
     for (let index = 1; index < dataList.length - 1; index += 1) {
       const student = dataList[index].split(',');
       if (student[3] === 'CS') {
