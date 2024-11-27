@@ -7,7 +7,7 @@ function countStudents(path) {
     let total = 0;
     const CS = [];
     const SWE = [];
-    for (let index = 1; index < dataList.length - 1; index += 1) {
+    for (let index = 1; index < dataList.length; index += 1) {
       const student = dataList[index].split(',');
       if (student[3] === 'CS') {
         total += 1;
@@ -18,10 +18,8 @@ function countStudents(path) {
       }
     }
     console.log(`Number of students: ${total}`);
-    console.log(`Number of students in CS: ${CS.length}. \
-List: ${CS.toString().replaceAll(',', ', ')}`);
-    console.log(`Number of students in SWE: ${SWE.length}. \
-List: ${SWE.toString().replaceAll(',', ', ')}`);
+    console.log(`Number of students in CS: ${CS.length}. List: ${CS.toString().replaceAll(',', ', ')}`);
+    console.log(`Number of students in SWE: ${SWE.length}. List: ${SWE.toString().replaceAll(',', ', ')}`);
   } catch (err) {
     throw new Error('Cannot load the database');
   }

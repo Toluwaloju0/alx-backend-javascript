@@ -7,7 +7,7 @@ function countStudents(path) {
       let total = 0;
       const CS = [];
       const SWE = [];
-      for (let index = 1; index < dataList.length - 1; index += 1) {
+      for (let index = 1; index < dataList.length; index += 1) {
         const student = dataList[index].split(',');
         if (student[3] === 'CS') {
           total += 1;
