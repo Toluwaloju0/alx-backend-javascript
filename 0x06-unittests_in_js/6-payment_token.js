@@ -4,5 +4,4 @@ function getPaymentTokenFromAPI(success) {
   }
 }
 
-console.log(getPaymentTokenFromAPI(true))
 module.exports = getPaymentTokenFromAPI;
