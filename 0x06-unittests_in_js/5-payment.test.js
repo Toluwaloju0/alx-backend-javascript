@@ -17,7 +17,7 @@ describe('Test send payment to API', function() {
     expect(consoleSpy.calledOnceWithExactly('The total is: 120')).to.be.true;
   });
   it('should test sendPaymentRequestToAPI with 10 and 10', function() {
-    sendPaymentRequestToAPI(100, 20);
+    sendPaymentRequestToAPI(10, 10);
     expect(consoleSpy.calledOnceWithExactly('The total is: 20')).to.be.true;
   });
 });
