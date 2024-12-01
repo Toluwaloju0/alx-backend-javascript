@@ -1,4 +1,4 @@
-const { expect } = import('chai');
+const { expect } = require('chai');
 const sinon = require('sinon');
 // const app = require('./api');
 const request = require('request');
