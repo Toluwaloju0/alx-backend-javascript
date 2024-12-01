@@ -55,9 +55,7 @@ describe('Login', function() {
       headers: {
         'Content-Type': 'Application/json'
       },
-      form: {
-        userName: 'Tolu'
-      }
+      body: JSON.stringify({userName: 'Tolu'})
     };
     request.post(url, (err, res, body) => {
       if (err) return done(err);
