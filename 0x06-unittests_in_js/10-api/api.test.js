@@ -1,5 +1,4 @@
-const { expect } = require('chai');
-const sinon = require('sinon');
+const { expect } = import('chai');
 const request = require('request');
 
 
@@ -33,7 +32,7 @@ describe('Cart page', function() {
 });
 
 describe('Available payment', function() {
-  it('check the available patments', function() {
+  it('check the available patments', function(done) {
     request('http://localhost:7865/available_payments', (err, res, body) => {
       if (err) return done(err);
       expect(res.statusCode).to.equal(200);
@@ -49,7 +48,7 @@ describe('Available payment', function() {
 });
 
 describe('Login', function() {
-  it('get the login for a user', function() {
+  it('get the login for a user', function(done) {
     const url = {
       url: 'http://localhost:7865/login',
       headers: {
@@ -61,6 +60,7 @@ describe('Login', function() {
       if (err) return done(err);
       expect(res.statusCode).to.equal(200);
       expect(body).to.equal('Welcome Tolu');
+      done()
     });
   });
 });
