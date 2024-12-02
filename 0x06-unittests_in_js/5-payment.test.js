@@ -3,8 +3,6 @@ const { expect } = require('chai');
 const sinon = require('sinon');
 const sendPaymentRequestToApi = require('./5-payment');
 
-// const expect = chai.expect;
-
 describe('Test send payment to API', function() {
   beforeEach(function() {
     consoleSpy = sinon.spy(console, 'log');
